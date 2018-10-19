@@ -1,6 +1,14 @@
 /node_modules/
 *ngfactory.ts
 *ngsummary.json
+yarn.lock
 *.log
+*.json
+*.md
 .idea
+#
 dist
+config
+example
+src
+test
