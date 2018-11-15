@@ -63,12 +63,6 @@ export class InputTrimDirective extends DefaultValueAccessor {
    */
   set value( val: any ) {
 
-    // to prevent setting `undefined` if the model is undefined or null
-    //
-    // FIX: https://github.com/anein/angular2-trim-directive/issues/18
-    //
-    val = val || '';
-
     // update element
     this.writeValue( val );
 
@@ -115,6 +109,11 @@ export class InputTrimDirective extends DefaultValueAccessor {
    * @param {any} value - new value
    */
   public writeValue( value: any ): void {
+    // to prevent setting `undefined` if the model is undefined or null
+    //
+    // FIX: https://github.com/anein/angular2-trim-directive/issues/18
+    //
+    value = value || '';
 
     this._value = value;
 
